@@ -6,13 +6,13 @@ module.exports = function (app) {
 
   const shops = [{ name: "two coins tattoo",location:"hitchin" }, { name: "stoy junx",location:"Athens" }];
 
-  app.get("/api/v1/cars", (req, res) => {
+  app.get("/api/v1/tattoo-shops", (req, res) => {
     res.status(200).json(shops);
   });
 
-  app.post("/api/v1/cars", (req, res) => {
+  app.post("/api/v1/tattoo-shops", (req, res) => {
     const newShop = req.body;
-    cars.push(newShop);
+    shops.push(newShop);
     res.sendStatus(201);
   });
 };
